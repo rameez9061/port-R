@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Baloo+Bhaijaan+2&family=Balsamiq+Sans&family=Dancing+Script&family=Merriweather:wght@300&family=Poppins:ital,wght@0,700;0,800;0,900;1,400&family=Roboto&family=Roboto+Slab:wght@300;700&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins';
+
+        }
+
+        body {
+            background-color: white;
+            color: black;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .lightmode {
+
+            background-color: white;
+            color: black;
+        }
+
+        .darkmode {
+
+            background-color: black;
+            color: white;
+        }
+
+        .circlemode {
+
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            color: black;
+            cursor: pointer;
+        }
+
+
+        .main {
+
+            width: 100%;
+            height: auto;
+        }
+
+        /* .bac {
+            width: 100%;
+            height: 100%;
+        } */
+
+        .top::before {
+
+            content: "";
+            background: url(image1.png);
+            background-position: center;
+            background-repeat: no no-repeat;
+            background-size: cover;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 60px;
+            z-index: -1;
+            filter: brightness(0.4);
+        }
+
+        .top {
+
+            width: 100%;
+            height: 60px;
+            /* background-color: black; */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: fixed;
+            z-index: 999;
+            box-shadow: 2px 2px 12px 2px #8490ff;
+            top: 2px;
+        }
+
+        .lists {
+            display: flex;
+            align-items: center;
+        }
+
+        .lists ul {
+
+            display: flex;
+            align-items: center;
+        }
+
+        .lists ul li {
+
+            list-style: none;
+            padding-right: 2rem;
+        }
+
+
+        .lists ul li a {
+
+            text-decoration: none;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+
+
+        .icon i {
+
+            display: none;
+            cursor: pointer;
+        }
+
+        .biodata {
+            margin-top: 5rem;
+            text-align: center;
+            padding: 0rem 5rem;
+        }
+
+        .biodata h1 {
+
+            padding: 2rem 0rem;
+        }
+
+        .biodata p {
+
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        #portion {
+
+            display: flex;
+            margin-bottom: 2rem;
+        }
+
+        #portion p {
+
+
+            padding: 2rem;
+        }
+
+        #first {
+            border-right: 2px solid black;
+
+        }
+
+        .skillhead {
+            width: 100%;
+            text-align: center;
+        }
+
+        .all {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .skillbox {
+
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 2px 2px 12px 2px #8490ff;
+            margin: 1rem;
+        }
+
+        .skillbox p {
+
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+
+
+        .vision {
+
+            text-align: center;
+            margin-top: 1rem;
+            padding: 5rem 5rem;
+        }
+
+        .vision p {
+            margin-top: 1.5rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        @media only screen and (max-width:865px) {
+            .biodata {
+            margin-top: 5rem;
+            /* text-align: justify; */
+            padding: 0rem 5rem;
+        }
+
+        .biodata h1 {
+
+            padding: 1rem 0rem;
+        }
+
+        .biodata h3{
+            padding: 1rem 0rem;
+        }
+
+        .biodata p {
+
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            /* text-align: justify; */
+        }
+
+        #portion {
+
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 2rem;
+        }
+
+        #portion p {
+
+
+            padding: 2rem;
+        }
+
+        #first {
+            border-bottom: 2px solid black;
+            border-right: 0;
+
+        }
+
+        .skillhead {
+            width: 100%;
+            text-align: center;
+        }
+
+        .all {
+
+            box-sizing: border-box;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0rem 1rem;
+        }
+
+
+        .skillbox {
+
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 2px 2px 12px 2px #8490ff;
+            margin: 1rem;
+        }
+
+        .skillbox p {
+
+            box-sizing: border-box;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+
+
+        .vision {
+
+            text-align: center;
+            margin-top: 1rem;
+            padding: 5rem 5rem;
+        }
+
+        .vision p {
+            margin-top: 1.5rem;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            /* text-align: justify; */
+        }
+
+            #btn {
+
+                display: block;
+            }
+
+
+
+            #tags {
+
+                /* display:block; */
+                flex-direction: column;
+                align-items: flex-start;
+                position: absolute;
+                top: 3.7rem;
+                left: 0;
+                transform: translateX(-15rem);
+                color: white;
+                background-color: black;
+                transition: transform 0.5s;
+                box-sizing: border-box;
+                padding: 1rem 2rem;
+                border-radius: 0rem 0rem 0.5rem 0rem;
+            }
+
+            #tags li {
+
+                margin-bottom: 1rem;
+            }
+
+            .child {
+                box-sizing: border-box;
+                text-align: center;
+                padding: 2rem 1rem;
+                grid-column: 3 span;
+            }
+
+            .grid2 {
+                margin-top: 5rem;
+                display: grid;
+                grid-template-columns: 1fr;
+                column-gap: 1rem;
+                box-sizing: border-box;
+                padding: 0rem 1rem;
+            }
+        }
+
+
+        .icon i {
+
+            display: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body id="body">
+
+    <div class="top">
+
+        <div class="log">
+            <h1>Rameez
+
+            </h1>
+        </div>
+        <div class="lists">
+            <ul id="tags">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li>
+                    <a href="portfolio.html">Portfolio</a>
+                </li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Pages</a></li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+            <div class="circlemode" id="gol"><i class="ri-moon-fill"></i></div>
+        </div>
+
+        <div class="icon">
+            <i id="btn" class="ri-menu-line"></i>
+        </div>
+    </div>
+    <div class="biodata">
+        <h1>Rameez Aziz</h1>
+        <h3> Description</h3>
+        <p>Entry-Level Web Developer | HTML, CSS, JavaScript Enthusiast | Eager to Grow and Contribute .
+
+            Excited to embark on my journey in web development, I am a dedicated enthusiast with a solid foundation in HTML, CSS, and JavaScript. With a passion for crafting engaging user experiences and a hunger for continuous learning, I am eager to leverage my skills and contribute to dynamic projects.</p>
+        <div class="EDU">
+
+            <h1>EDUCATION</h1>
+            <div id="portion">
+                <p id="first">Intermediate || Army College Malir Cantt Karachi Sindh, Pakistan</p>
+                <p>Currently Bachelor's of Computer Science || IQRA University Karachi Sindh Pakistan</p>
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="skills">
+        <div class="skillhead">
+            <h1> Skills</h1>
+        </div>
+        <div class="all">
+            <div class="skillbox" id="skillbox1">
+                <h2>HTML</h2>
+                <p>HTML, or HyperText Markup Language, is the standard language for creating web pages. It uses tags to define elements like paragraphs, headings, and images, organized in a hierarchical structure. Attributes can modify element behavior. HTML documents consist of an overall structure with <html>, <head>, and <body> tags. HTML serves as the foundation of web development, allowing for the creation of accessible and visually appealing web pages.</p>
+            </div>
+            <div class="skillbox" id="skillbox2">
+                <h2>CSS</h2>
+                <p>CSS, or Cascading Style Sheets, is a stylesheet language used to style and format HTML documents. It allows web developers to control the presentation of web pages, including layout, colors, fonts, and spacing. CSS works by selecting HTML elements and applying styles to them through rulesets. These rulesets consist of selectors that target specific elements and declarations that define the styles to be applied. CSS enables consistent and visually appealing designs across multiple web pages by separating content from presentation. It plays a crucial role in enhancing user experience and creating responsive and accessible websites.</p>
+            </div>
+            <div class="skillbox" id="skillbox3">
+                <h2>JAVASCRIPT</h2>
+                <p>JavaScript, often abbreviated as JS, is a versatile programming language primarily used to add interactivity and dynamic behavior to web pages. Unlike HTML and CSS, which focus on structure and presentation, JavaScript enables web developers to create interactive features such as form validation, animations, and event handling. JS code can be embedded directly within HTML documents or included from external files. It runs directly in the web browser, allowing for real-time manipulation of webpage content and interactions with users. JavaScript is essential for creating modern, interactive web applications and plays a crucial role in enhancing user experience and functionality on the web</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="vision">
+        <h1>OUR VISION</h1>
+        <p>Empowering individuals to unlock their full potential and thrive in a rapidly evolving world is at the heart of our vision. We envision a future where innovative technologies and inclusive communities converge to drive positive change on a global scale. Through our commitment to fostering creativity, collaboration, and continuous learning, we aspire to inspire and equip individuals with the skills, resources, and opportunities they need to shape a brighter tomorrow. Together, we strive to build a world where every person has the tools and support they need to realize their dreams and contribute meaningfully to society. Our vision is to be a catalyst for transformation, empowering individuals and communities to create a more sustainable, equitable, and prosperous future for generations to come.</p>
+    </div>
+    <script>
+        let body = document.getElementById('body');
+        let gol = document.getElementById('gol');
+
+        gol.addEventListener('click', function () {
+
+            if (body.classList.contains('lightmode') || body.className === '') {
+
+                body.className = 'darkmode';
+                gol.style.backgroundColor = 'orange';
+                gol.style.color = 'white';
+            } else {
+
+                body.className = 'lightmode';
+                gol.style.backgroundColor = 'white';
+                gol.style.color = 'black';
+            }
+        })
+
+        function slider() {
+
+
+            let tags = document.getElementById('tags');
+            let btn = document.getElementById('btn');
+
+            btn.addEventListener('click', function () {
+                if (tags.style.transform == 'translateX(-15rem)' || tags.style.transform === '') {
+                    tags.style.transform = 'translateX(0)';
+                    console.log('hello2');
+
+                }
+
+                else {
+
+                    tags.style.transform = 'translateX(-15rem)';
+                    console.log('hello');
+
+                }
+            })
+        } slider();
+
+
+    </script>
+</body>
+
+</html>
